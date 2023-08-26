@@ -1,15 +1,18 @@
-#language: es
-Característica: Crear, actualizar y eliminar usuario
+Feature: Create, update and delete user
 
   @PostUser
-  Escenario: Crear un usuario exitoso
-    Cuando consumo la url del servicio
-    Entonces validamos la respuesta del servicio
+  Scenario: Create a successful user
+    When I consume the service endpoint
+    Then I can validate the response of the service
 
 
   @PutUser
-  Escenario: Actualizar un usuario
-    Cuando consumo la url y actualizo la informacion
-    Entonces validamos la respuesta del servidor
+  Scenario: Update a user
+    When I consume the service endpoint and I update the information
+    Then I can validate the response of the server
 
 
+  @DeleteUser
+  Scenario: Delete a user
+    When I consume the endpoint and I send the id
+    Then I can validate the phone

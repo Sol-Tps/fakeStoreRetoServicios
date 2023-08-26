@@ -5,10 +5,10 @@ import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-public class PutDataResponse implements Question<UserModel> {
+public class PutDataResponse implements Question<Object> {
     @Override
-    public UserModel answeredBy(Actor actor) {
-        return SerenityRest.lastResponse().as(UserModel.class);
+    public Object answeredBy(Actor actor) {
+        return SerenityRest.lastResponse().statusCode();
     }
 
     public static PutDataResponse was(){
