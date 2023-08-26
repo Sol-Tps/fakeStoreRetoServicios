@@ -1,5 +1,6 @@
 package com.fakestoreapi.stepDefinitions;
 
+import com.fakestoreapi.task.DeleteUserTask;
 import com.fakestoreapi.utils.LeerExcel;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
@@ -24,6 +25,9 @@ public class DeleteFakeStoreStepDef {
 
     @When("I consume the endpoint and I send the id")
     public void iConsumeTheEndpointAndISendTheId() {
+        user.attemptsTo(
+                DeleteUserTask.on()
+        );
 
     }
     @Then("I can validate the phone")

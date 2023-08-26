@@ -20,6 +20,7 @@ public class LeerExcel {
         String Lastname = null;
         String CodeStatus = null;
         String Phone = null;
+        String Id = null;
 
         try {
             FileInputStream file1 = new FileInputStream(new File(archivoExcel));
@@ -45,12 +46,14 @@ public class LeerExcel {
             CodeStatus = celda.toString();
             celda = fila.getCell(7);
             Phone = celda.toString();
+            celda = fila.getCell(8);
+            Id = celda.toString();
 
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        String InfoUser[] = {Endpoint,Email,Username,Password,Firstname,Lastname,CodeStatus,Phone};
+        String InfoUser[] = {Endpoint,Email,Username,Password,Firstname,Lastname,CodeStatus,Phone,Id};
         return InfoUser;
     }
 
