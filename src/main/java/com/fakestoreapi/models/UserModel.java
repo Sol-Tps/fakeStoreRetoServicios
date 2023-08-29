@@ -23,10 +23,4 @@ public class UserModel {
     @JsonProperty("name")
     public Name name;
 
-    @JsonProperty("address")
-    public Address address;
-
-    @JsonProperty("phone")
-    public String phone;
-
 }

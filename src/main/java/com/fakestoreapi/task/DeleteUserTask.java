@@ -1,7 +1,6 @@
 package com.fakestoreapi.task;
 
 import com.fakestoreapi.utils.LeerExcel;
-import io.cucumber.java.hu.De;
 import io.restassured.http.ContentType;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -17,7 +16,7 @@ public class DeleteUserTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Delete.from(informacion[0]+"/"+informacion[8])
+                Delete.from(informacion[0].toString()+"/"+informacion[7].toString())
                         .with(
                                 requestSpecification -> requestSpecification
                                         .contentType(ContentType.JSON)

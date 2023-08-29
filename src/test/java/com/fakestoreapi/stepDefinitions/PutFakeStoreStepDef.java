@@ -37,13 +37,13 @@ public class PutFakeStoreStepDef {
     }
     @Then("I can validate the response of the server")
     public void ICanValidateTheResponseOfTheServer() {
-//        user.should(
-//                seeThat(
-//                        "La respuesta del servidor fue: ",
-//                        respuesta-> PutDataResponse.was(),
-//                        equalTo(Integer.parseInt(informacion[6]))
-//                )
-//        );
+        user.should(
+               seeThat(
+                       "The server response was: ",
+                       PutDataResponse.was(),
+                       equalTo(Integer.parseInt(informacion[6]))
+                )
+       );
     }
 
 }

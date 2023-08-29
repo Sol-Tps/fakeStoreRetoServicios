@@ -20,7 +20,7 @@ public class PutUserTask implements Task {
         UserModel userInfo = actor.asksFor(BuildDataUser.was()); //LLama la construccion de la data con el modelo correspondiente
 
         actor.attemptsTo(
-                Put.to(informacion[0])
+                Put.to(informacion[0].toString()+"/"+informacion[7].toString())
                         .with(
                                 requestSpecification -> requestSpecification
                                         .contentType(ContentType.JSON)//tipo de formato a utilizar

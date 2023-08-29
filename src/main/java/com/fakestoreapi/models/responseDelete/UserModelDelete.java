@@ -1,7 +1,5 @@
 package com.fakestoreapi.models.responseDelete;
 
-import com.fakestoreapi.models.Address;
-import com.fakestoreapi.models.Name;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -34,7 +32,7 @@ public class UserModelDelete {
     @JsonProperty("phone")
     public String phone;
 
-    @JsonProperty("v")
+    @JsonProperty("__v")
     public Integer v;
 
 }

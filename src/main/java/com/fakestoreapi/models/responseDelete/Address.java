@@ -1,4 +1,4 @@
-package com.fakestoreapi.models;
+package com.fakestoreapi.models.responseDelete;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -12,6 +12,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Address {
 
+    @JsonProperty("geolocation")
+    public Geolocation geolocation;
+
     @JsonProperty("city")
     public String city;
 
@@ -23,8 +26,5 @@ public class Address {
 
     @JsonProperty("zipcode")
     public String zipcode;
-
-    @JsonProperty("geolocation")
-    public Geolocation geolocation;
 
 }
