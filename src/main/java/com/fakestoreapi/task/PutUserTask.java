@@ -17,20 +17,20 @@ public class PutUserTask implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        UserModel userInfo = actor.asksFor(BuildDataUser.was()); //LLama la construccion de la data con el modelo correspondiente
+        UserModel userInfo = actor.asksFor(BuildDataUser.was());
 
         actor.attemptsTo(
                 Put.to(informacion[0].toString()+"/"+informacion[7].toString())
                         .with(
                                 requestSpecification -> requestSpecification
-                                        .contentType(ContentType.JSON)//tipo de formato a utilizar
-                                        .body(userInfo) // es un objeto
+                                        .contentType(ContentType.JSON)
+                                        .body(userInfo)
                         )
         );
 
     }
     public static PutUserTask on(){
         return instrumented(PutUserTask.class);
-    } //metodo de interaccion con la task
+    }
 
 }
