@@ -37,7 +37,7 @@ public class PostFakeStoreStepDef {
 
         user.should(
                 seeThat(
-                        "El codigo de respuesta fue: ",
+                        "The response code was: ",
                         ServerResponse.was(),
                         equalTo(Integer.parseInt(informacion[6]))
                 )
